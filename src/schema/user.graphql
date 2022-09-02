@@ -1,0 +1,31 @@
+type Query {
+  getUsers: [User]
+  createUser(userInput: UserInput): User
+  login(loginInput: LoginInput): LoginMsg
+  me: User
+}
+
+type User {
+  id: Int
+  account: String
+  password: String
+  name: String
+  birthday: String
+}
+
+type LoginMsg {
+  message: String
+  token: String
+}
+
+input UserInput {
+  account: String
+  password: String
+  name: String
+  birthday: String
+}
+
+input LoginInput {
+  account: String
+  password: String
+}
