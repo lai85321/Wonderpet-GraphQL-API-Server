@@ -25,9 +25,16 @@
     | message  | String   | Response message|
 
     ```
-
-    //範例
-
+    
+    //Example
+    
+    query login($loginInput: LoginInput) {
+      login(loginInput: $loginInput) {
+        message
+      }
+    }
+    
+    //Input Variable
     {
 
       "loginInput": {
@@ -46,7 +53,7 @@
 
     ```
 
-    //規格
+    //Example
 
     query me {
 
